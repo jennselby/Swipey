@@ -19,14 +19,13 @@ export default class SwipeyButtons extends Component {
     var swipeoutButtons = [
       {
         text: 'Button',
-        style: styles.swipeyThing,
       },
     ];
     return (
       <View style={styles.container}>
         <Swipeout right={swipeoutButtons}>
             <View>
-                <Text style={styles.swipeyThing}>Swipe me left</Text>
+                <Text>Swipe me left</Text>
             </View>
         </Swipeout>
       </View>
@@ -39,10 +38,8 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#F5FCFF',
+    padding: 20,
   },
-  swipeyThing: {
-    width: 300,
-  }
 });
 
 AppRegistry.registerComponent('SwipeyButtons', () => SwipeyButtons);

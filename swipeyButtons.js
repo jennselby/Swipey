@@ -11,14 +11,23 @@ import {
   Text,
   View
 } from 'react-native';
+import Swipeout from 'react-native-swipe-out'
 
 export default class SwipeyButtons extends Component {
   render() {
+    // use really basic example from https://www.npmjs.com/package/react-native-swipe-out
+    var swipeoutButtons = [
+      {
+        text: 'Button',
+      },
+    ];
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          This will be Swipey!
-        </Text>
+        <Swipeout right={swipeoutButtons}>
+            <View>
+                <Text>Swipe me left</Text>
+            </View>
+        </Swipeout>
       </View>
     );
   }
@@ -30,11 +39,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
   },
 });
 
